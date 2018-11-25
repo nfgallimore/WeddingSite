@@ -6,10 +6,9 @@ block header
 block content
 	#attendingform
 		form(action='/rsvp')
-			select(id="xxx", name="xxxyyy")
-				-for(var i = 1;i < 10; i++){
-					option(value="#{i}") Some value for #{i}
-				-}
+			select(id="guestselect", name="guestselect")
+				each guest in guests
+					option(value=(guest.name)) #{guest.name}
 			input(type="radio", name="attending", value="yes", checked=attending=="yes")
 			| Attending
 			input(type="radio", name="attending", value="no", checked=attending=="no")
