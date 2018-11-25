@@ -7,7 +7,12 @@ const bodyParser= require('body-parser')
 
 var indexRouter = require('./routes/index');
 var photoRouter = require('./routes/photos');
+var guestbookRouter = require('./routes/guestbook');
 var rsvpRouter = require('./routes/rsvp');
+var storyRouter = require('./routes/story');
+var mapRouter = require('./routes/map');
+var registryRouter = require('./routes/registry');
+
 var app = express();
 
 // view engine setup
@@ -23,6 +28,11 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 app.use('/', indexRouter);
 app.use('/photos', photoRouter);
+app.use('/guestbook', guestbookRouter);
+app.use('/rsvp', rsvpRouter);
+app.use('/story', storyRouter);
+app.use('/map', mapRouter);
+app.use('/registry', registryRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

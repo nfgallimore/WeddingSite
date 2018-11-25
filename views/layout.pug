@@ -1,9 +1,27 @@
 doctype html
 html
-    head
-        title= title
-        link(rel='stylesheet', href='/stylesheets/style.css')
-        script(type='text/javascript' src='/javascripts/photos.js')
-    body(onload="four()")
-        .container
-            block content
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		block scripts
+			script(type='text/javascript' src='https://code.jquery.com/jquery-3.3.1.min.js')
+	body
+		.container
+			block header
+			ul.nav
+				li
+					a(href='/') Home
+				li
+					a(href='photos') Photos
+				li
+					a(href='guestbook') Guest Book
+				li
+					a(href='rsvp') RSVP
+				li
+					a(href='story') Our Story
+				li
+					a(href='map') Map
+				li
+					a(href='registry') Wedding Registry
+
+			block content

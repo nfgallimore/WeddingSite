@@ -1,37 +1,23 @@
 extends layout
 
-block content
+block header
     h1= title
-    .nav
-        ul
-            li
-                a(href="/") Home
-            li
-                a(href='photos') Photos
-            li
-                a(href='index.html') Guest Book
-            li
-                a(href='index.html') RSVP
-            li
-                a(href='index.html') Our Story
-            li
-                a(href='index.html') Map
-            li
-                a(href='index.html') Wedding Registry
+
+block content
     #photos
-        .row
-            .column
+        .img-row
+            .img-column
                 img(src='/images/love.jpg')
                 img(src='/images/ny.jpg')
                 img(src='images/colorado1.jpg')
-            .column
+            .img-column
                 img(src='images/halloween.jpg')
                 img(src='images/colorado2.jpg')
                 img(src='images/colorado.jpg')
-            .column
+            .img-column
                 img(src='images/ny.jpg')
                 img(src='images/ring.jpg')
                 img(src='images/denver.jpg')
-            .column
+            .img-column
                 img(src='images/engagement.jpg')
                 img(src='images/halloween.jpg')
