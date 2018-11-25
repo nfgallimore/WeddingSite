@@ -3,7 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const bodyParser= require('body-parser')
+var bodyParser= require('body-parser')
+var mongodb = require("mongodb");
+var expressMongoDb = require('express-mongo-db');
 
 var indexRouter = require('./routes/index');
 var photoRouter = require('./routes/photos');
@@ -12,8 +14,13 @@ var rsvpRouter = require('./routes/rsvp');
 var storyRouter = require('./routes/story');
 var mapRouter = require('./routes/map');
 var registryRouter = require('./routes/registry');
+var guestsRouter = require('./routes/guests');
 
 var app = express();
+
+// setup db
+var URL = "mongodb://heroku_468pgkzw:rorm346755r9ib2n7t7ls9ej7c@ds055525.mlab.com:55525/heroku_468pgkzw";
+app.use(expressMongoDb(URL));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

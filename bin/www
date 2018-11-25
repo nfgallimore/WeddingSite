@@ -5,6 +5,8 @@
  */
 
 var app = require('../app');
+var db = require('../db');
+
 var debug = require('debug')('weddingsite:server');
 var http = require('http');
 
