@@ -8,7 +8,7 @@ block content
 		form(action='/rsvp')
 			select(id="guestselect", name="guestselect")
 				each guest in guests
-					option(value=(guest.name)) #{guest.name}
+					option(value=(guest.name) selected=(guest.name == 'Larry Gallimore') ? true : false) #{guest.name}
 			input(type="radio", name="attending", value="yes", checked=attending=="yes")
 			| Attending
 			input(type="radio", name="attending", value="no", checked=attending=="no")
