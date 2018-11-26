@@ -14,7 +14,6 @@ var rsvpRouter = require('./routes/rsvp');
 var storyRouter = require('./routes/story');
 var mapRouter = require('./routes/map');
 var registryRouter = require('./routes/registry');
-var guestsRouter = require('./routes/guests');
 
 var app = express();
 
