@@ -1,6 +1,23 @@
 extends layout
 
 block header
-    h1 Nick and Sara
-    
+    h1= title
+
 block content
+    #photos
+        .img-row
+            .img-column
+                img(src='/images/love.jpg')
+                img(src='/images/ny.jpg')
+                img(src='images/colorado1.jpg')
+            .img-column
+                img(src='images/halloween.jpg')
+                img(src='images/colorado2.jpg')
+                img(src='images/colorado.jpg')
+            .img-column
+                img(src='images/ny.jpg')
+                img(src='images/ring.jpg')
+                img(src='images/denver.jpg')
+            .img-column
+                img(src='images/engagement.jpg')
+                img(src='images/halloween.jpg')

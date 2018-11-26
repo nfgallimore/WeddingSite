@@ -5,14 +5,15 @@ block header
 
 block content
 	#attendingform
-		form(action="/rsvp" method="post")
-			div.select-style
-				select(name="name")
+		form.pure-form(action="/rsvp" method="post")
+			fieldset
+				select#rsvp-select(name="name")
 					each guest in guests
-						option(value=(guest.name) selected=(guest.name == "Larry Gallimore") ? true : false) #{guest.name}
-			input(type="radio", name="attending", value="yes", checked=attending=="yes")
-			| Attending
-			input(type="radio", name="attending", value="no", checked=attending=="no")
-			| Not Attending
-			.button
-				input(type='submit')
+						option(value=(guest.name)) #{guest.name}
+				span.rsvp
+					input.rsvp(type="radio", name="attending", value="yes", checked=attending=="yes")
+					span.radiolabel Attending
+				span.rsvp
+					input.rsvp(type="radio", name="attending", value="no", checked=attending=="no")
+					span.radiolabel Not Attending
+				button.pure-button.pure-button-primary.rsvp(type="submit") Submit

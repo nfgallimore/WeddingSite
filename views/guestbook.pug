@@ -1,22 +1,14 @@
 extends layout
 
 block header
-	h1 Guest Book
+	h1 Post a message on our wall!
 
 block content
-	h1 Post a message on our wall!
 	form(action="/guestbook" method="post")
-		input(type="text", name="name", value="Enter name")
-		input(type="text", name="note", value="Enter note")
-		.button
-			input(type='submit')
-
-	#guestbook
-		table
-			thead
-				tr: th Posts
-				tbody
-					each post in posts
-						tr
-							td 
-								p #{post.name} - #{post.note}
+		input(type="text", name="name", placeholder="Enter name")
+		div
+			textarea.note(name="note", rows="10", cols="30", placeholder="Enter note")
+		button.pure-button.pure-button-primary.rsvp(type="submit") Submit	
+	ul.smooshed
+		each post in posts
+			li.post #{post.name} - #{post.note}

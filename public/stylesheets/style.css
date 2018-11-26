@@ -1,5 +1,5 @@
 .container {
-    margin: 0px auto;
+    margin: 0 auto;
     width: 80%;
 }
 
@@ -8,7 +8,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #0d2d60;
     padding: 50px;
-    color: #ffffff;
+    width: 100%;
 }
 
 @font-face {
@@ -24,7 +24,7 @@ h1 {
 	color: #ffffff;
 }
 
-ul {
+ul.nav {
 	list-style-type: none;
 	padding: 0;
 	overflow: hidden;
@@ -33,12 +33,12 @@ ul {
     text-align: center;
 }
 
-ul li {
+ul.nav li {
 	display: inline-block;
-    float: none;
+	float: none;
 }
 
-li a {
+li.nav a {
 	display: block;
 	color: white;
 	text-align: center;
@@ -46,7 +46,7 @@ li a {
 	text-decoration: none;
 }
 
-li a:hover {
+li.nav a:hover {
 	background-color: #162947;
 }
 
@@ -87,23 +87,33 @@ form {
 	margin: 40px auto;
 }
 
-.select-style {
-    border: 1px solid #ccc;
-    width: 120px;
-    border-radius: 3px;
-    background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
+li.post {
+	font-style: italic;
+	font-size: 24px;
+	text-align: left;
+	margin-top: 20px;
+	list-style: none;
+	color: #ffffff;
 }
 
-.select-style select {
-    padding: 5px 8px;
-    width: 130%;
-    border: none;
-    box-shadow: none;
-    background: transparent;
-    background-image: none;
-    -webkit-appearance: none;
+ul.smooshed {
+	margin-top: 50px;
+	margin-left: 15%;
+	margin-right: 15%;
 }
 
-.select-style select:focus {
-    outline: none;
+span.radiolabel {
+	color: #ffffff;
+}
+
+#rsvp-select, span.rsvp, button.rsvp {
+	margin:0 5px;
+}
+
+input.rsvp {
+	margin: 0 8px;
+}
+
+textarea.note {
+	margin: 20px 0;
 }

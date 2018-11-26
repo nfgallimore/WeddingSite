@@ -8,7 +8,6 @@ var mongodb = require("mongodb");
 var expressMongoDb = require('express-mongo-db');
 
 var indexRouter = require('./routes/index');
-var photoRouter = require('./routes/photos');
 var guestbookRouter = require('./routes/guestbook');
 var rsvpRouter = require('./routes/rsvp');
 var storyRouter = require('./routes/story');
@@ -33,7 +32,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.use('/', indexRouter);
-app.use('/photos', photoRouter);
 app.use('/guestbook', guestbookRouter);
 app.use('/rsvp', rsvpRouter);
 app.use('/story', storyRouter);
